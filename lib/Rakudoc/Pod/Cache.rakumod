@@ -12,10 +12,18 @@ submethod BUILD(
     :$cache-path = 'rakudoc_cache',
 )
 {
-    $!cache-path = $cache-path.IO.resolve(:completely);
-    $!precomp-repo = CompUnit::PrecompilationRepository::Default.new(
-        :store(CompUnit::PrecompilationStore::File.new(:prefix($!cache-path))),
-    );
+
+  # "File" class was deprecated; use the FileSystem if it's available, fall back to deprecated if not.
+  # (should now work on both new and old rakudos, avoiding deprecation notice where possible
+  my $class = ::("CompUnit::PrecompilationStore::FileSystem");
+  if $class ~~ Failure {
+    $class = ::("CompUnit::PrecompilationStore::File");
+  }
+
+  $!cache-path = $cache-path.IO.resolve(:completely);
+  $!precomp-repo = CompUnit::PrecompilationRepository::Default.new(
+    :store($class.new(:prefix($!cache-path))),
+  );
 }
 
 method !compunit-handle($pod-file-path) {
