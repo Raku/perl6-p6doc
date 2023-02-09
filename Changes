@@ -1,6 +1,7 @@
 Revision history for rakudoc
 
 {{$NEXT}}
+    - Fix deprecated code warning
     - Relax 04-compunit.t tests so they pass when installing via Zef and the
       prerequisite modules are not already installed
     - Cache source contents to ensure the IO handle is only slurped once
