@@ -12,9 +12,13 @@ submethod BUILD(
     :$cache-path = 'rakudoc_cache',
 )
 {
+    my $class = ::("CompUnit::PrecompilationStore::FileSystem");
+    if $class ~~ Failure {
+        $class = ::("CompUnit::PrecompilationStore::File");
+    }
     $!cache-path = $cache-path.IO.resolve(:completely);
     $!precomp-repo = CompUnit::PrecompilationRepository::Default.new(
-        :store(CompUnit::PrecompilationStore::File.new(:prefix($!cache-path))),
+        :store($class.new(:prefix($!cache-path))),
     );
 }
 
