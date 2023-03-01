@@ -10,6 +10,9 @@ Revision history for rakudoc
     - Only use the first candidate from each repo when searching for doc
       files (i.e., don't look in older versions of a distribution)
 
+0.2.5  2023-03-01T18:30:00-04:00
+    - Change deprecated dependency Pod::Utilities to Pod::Utils
+
 0.2.4  2021-05-03T20:40:29-04:00
     - Fix portability issue (do not call .read-dist on
       CompUnit::Repository::Distribution)
