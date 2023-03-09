@@ -1,5 +1,5 @@
-use Pod::Utilities;
-use Pod::Utilities::Build;
+use Pod::Utils;
+use Pod::Utils::Build;
 
 #| Enum to classify all "kinds" of Documentable
 enum Kind is export (Type      => "type"     , Language => "language",
