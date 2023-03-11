@@ -15,5 +15,3 @@ Defined as:
     method new(*@args)
 
 =end pod
-
-# vim: expandtab softtabstop=4 shiftwidth=4 ft=perl6

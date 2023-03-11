@@ -24,5 +24,3 @@ X<Range operator>: Constructs a L<Range|/type/Range> from the arguments.
 
 
 =end pod
-
-# vim: expandtab softtabstop=4 shiftwidth=4 ft=perl6

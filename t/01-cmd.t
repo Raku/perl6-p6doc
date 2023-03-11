@@ -46,5 +46,3 @@ sub run-test($args) {
 
     ($result, ~$out, ~$err);
 }
-
-# vim:ft=raku sw=4 et:

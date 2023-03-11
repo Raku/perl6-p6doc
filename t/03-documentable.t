@@ -43,5 +43,3 @@ subtest "type" => {
     like $rakudoc.render($doc), rx:s/class Any/,
         "def = 'notfound' shows full doc";
 }
-
-# vim:ft=raku sw=4 et:

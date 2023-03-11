@@ -10,5 +10,3 @@ A low level part of the Perl 6 L<concurrency|/language/concurrency#Schedulers>
 system.
 
 =end pod
-
-# vim: expandtab softtabstop=4 shiftwidth=4 ft=perl6

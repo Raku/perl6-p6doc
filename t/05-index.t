@@ -65,5 +65,3 @@ subtest 'Validate lookup of every def', {
         diag "{.key.raku}\n{.value.raku}\n" for @entries Z=> @texts;
     }
 }
-
-# vim:ft=raku sw=4 et:
