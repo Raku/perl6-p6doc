@@ -1,6 +1,8 @@
 Revision history for rakudoc
 
 {{$NEXT}}
+
+0.2.5  2023-03-11T15:02:51-05:00
     - Switch to zef ecosystem
     - Change deprecated dependency Pod::Utilities to Pod::Utils
     - Fix deprecated code warning
