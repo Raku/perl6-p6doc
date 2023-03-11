@@ -1,9 +1,10 @@
 {
   "api": "1",
-  "auth": "github:Raku",
+  "auth": "zef:coke",
   "authors": [
     "Joel D. S. <@noisegul>",
-    "Tim Siegel <github:softmoth>"
+    "Tim Siegel <github:softmoth>",
+    "Will Coleda"
   ],
   "build-depends": [
   ],
