@@ -4,7 +4,7 @@ use Rakudoc::Pod::Cache;
 
 plan 6;
 
-my $test-doc = 't/test-doc/Type/Map.pod6';
+my $test-doc = 't/test-doc/Type/Map.rakudoc';
 
 my $cache-path = tempdir.IO.add('cache');
 my $pc = Rakudoc::Pod::Cache.new: :$cache-path;

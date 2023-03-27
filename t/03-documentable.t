@@ -12,7 +12,7 @@ subtest "language" => {
     plan 3;
     my $doc = Doc::Documentable.new: :$rakudoc,
                 :doc-source(%*ENV<RAKUDOC>.IO),
-                :filename('Language'.IO.add('operators.pod6'));
+                :filename('Language'.IO.add('operators.rakudoc'));
     isa-ok $doc, Rakudoc::Doc::Documentable, "Doc repr for Language/operators";
     like $doc.gist, rx/operators/, "Gist looks okay";
     like $rakudoc.render($doc), rx/Operators/, "Render looks okay";
@@ -23,13 +23,13 @@ subtest "type" => {
 
     my $doc = Doc::Documentable.new: :$rakudoc,
                 :doc-source(%*ENV<RAKUDOC>.IO),
-                :filename('Type'.IO.add('Any.pod6'));
+                :filename('Type'.IO.add('Any.rakudoc'));
     like $rakudoc.render($doc), rx:s/class Any/,
         "Render looks okay";
 
     $doc = Doc::Documentable.new: :$rakudoc,
                 :doc-source(%*ENV<RAKUDOC>.IO),
-                :filename('Type'.IO.add('Any.pod6')),
+                :filename('Type'.IO.add('Any.rakudoc')),
                 :def<root>;
     like $rakudoc.render($doc), rx:s/Subparsing/,
         "def = 'root' shows root portion";
@@ -38,7 +38,7 @@ subtest "type" => {
 
     $doc = Doc::Documentable.new: :$rakudoc,
                 :doc-source(%*ENV<RAKUDOC>.IO),
-                :filename('Type'.IO.add('Any.pod6')),
+                :filename('Type'.IO.add('Any.rakudoc')),
                 :def<notfound>;
     like $rakudoc.render($doc), rx:s/class Any/,
         "def = 'notfound' shows full doc";
