@@ -1,6 +1,8 @@
 Revision history for rakudoc
 
 {{$NEXT}}
+
+0.2.6  2023-03-27T19:34:57-04:00
     - Remove vim lines
     - Update sample doc files to .rakudoc extension
     - Update README

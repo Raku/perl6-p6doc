@@ -15,7 +15,7 @@ my class X::Rakudoc::BadDocument is X::Rakudoc {
     }
 }
 
-class Rakudoc:auth<zef:coke>:api<1>:ver<0.2.5> {
+class Rakudoc:auth<zef:coke>:api<1>:ver<0.2.6> {
     has @.doc-sources;
     has $.data-dir;
     has $!cache;
