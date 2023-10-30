@@ -35,9 +35,17 @@
   "tags": [
   ],
   "test-depends": [
-    "IO::MiddleMan:ver<1.001003+>",
-    "File::Directory::Tree",
-    "File::Temp:ver<0.0.8+>"
+    {
+      "name": "IO::MiddleMan",
+      "version": "1.001003+"
+    },
+    {
+      "name": "File::Directory::Tree"
+    },
+    {
+      "name": "File::Temp",
+      "version": "0.0.8+"
+    }
   ],
   "version": "0.2.6"
 }
