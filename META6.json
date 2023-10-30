@@ -9,7 +9,10 @@
   "build-depends": [
   ],
   "depends": [
-    "Pod::Utils:ver<0.0.2+>"
+    {
+      "name": "Pod::Utils",
+      "version": "0.0.2+"
+    }
   ],
   "description": "A tool for reading Raku documentation",
   "license": "Artistic-2.0",
